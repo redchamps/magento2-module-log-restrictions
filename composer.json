@@ -1,0 +1,44 @@
+{
+    "name": "redchamps/module-log-restrictions",
+    "description": "It will help you to allow only critical information to logs.",
+    "type": "magento2-module",
+    "keywords": [
+        "php",
+        "magento",
+        "magento2"
+    ],
+    "homepage": "https://redchamps.com/log-restrictions-magento-2-extension.html",
+    "readme": "README.md",
+    "license": [
+        "OSL-3.0"
+    ],
+    "authors": [
+        {
+            "name": "RedChamps",
+            "email": "hello@redchamps.com",
+            "homepage": "https://redchamps.com/",
+            "role": "maintainer"
+        },
+        {
+            "name": "Ravinder",
+            "email": "rav@redchamps.com",
+            "homepage": "https://twitter.com/_iamRav",
+            "role": "maintainer"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/redchamps/magento2-module-log-restrctions/",
+        "issues": "https://github.com/redchamps/magento2-module-log-restrictions/issues/"
+    },
+    "require": {
+        "monolog/monolog": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "RedChamps\\LogRestrictions\\": ""
+        }
+    }
+}

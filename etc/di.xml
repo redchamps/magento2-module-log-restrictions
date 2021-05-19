@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Monolog\Handler\AbstractHandler">
+        <plugin sortOrder="1" name="redChampsLogRestrictionsAbstractHandler"
+                type="RedChamps\LogRestrictions\Plugin\AbstractHandlerPlugin"/>
+    </type>
+    <type name="RedChamps\LogRestrictions\Plugin\AbstractHandlerPlugin">
+        <arguments>
+            <argument name="disAllowedLogs" xsi:type="array">
+                <item name="info" xsi:type="const">Monolog\Logger::INFO</item>
+                <item name="debug" xsi:type="const">Monolog\Logger::DEBUG</item>
+            </argument>
+            <argument name="effectiveModes" xsi:type="array">
+                <item name="production" xsi:type="const">Magento\Framework\App\State::MODE_PRODUCTION</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
